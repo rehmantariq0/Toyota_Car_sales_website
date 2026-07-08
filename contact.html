@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking - Toyota Sales</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">TOYOTA</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="btn-contact">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>Book a Test Drive or Get in Touch</p>
+    </section>
+
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Book a Test Drive</h2>
+            
+            <form id="bookingForm" onsubmit="submitForm(event)">
+                
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <input type="text" id="customer-name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="customer-phone" placeholder="0300-1234567" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Select Car Model</label>
+                    <select class="custom-select" id="car-select">
+                        <option>Toyota Corolla Altis</option>
+                        <option>Toyota Yaris</option>
+                        <option>Toyota Fortuner</option>
+                        <option>Toyota Hilux Revo</option>
+                        <option>Toyota Land Cruiser</option>
+                        <option>Toyota Camry</option>
+                        <option>Toyota Prius</option>
+                        <option>Toyota Supra</option>
+                        <option>Toyota Crown</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Preferred Date</label>
+                    <input type="date" id="booking-date" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Preferred Time</label>
+                    <input type="time" id="booking-time" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Message (Optional)</label>
+                    <textarea rows="4" placeholder="Any specific requirements?"></textarea>
+                </div>
+
+                <button type="submit" class="btn-form">Confirm Booking</button>
+            </form>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Toyota Car Sales is your trusted partner for buying luxury and reliable vehicles. We provide the best quality cars with official warranty and premium support.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars Inventory</a></li>
+                        <li><a href="about.html">About Company</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📍 Main Showroom, Blue Area, Islamabad</li>
+                        <li>📞 +92 300 1234567</li>
+                        <li>✉️ sales@toyotapakistan.com</li>
+                        <li>🕒 Mon - Sat: 9:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Toyota Car Sales. All Rights Reserved. | Designed by You</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Form Submit Hone Par Message Show Karna
+        function submitForm(event) {
+            event.preventDefault(); // Page reload hone se rokta hai
+
+            // Values uthana HTML inputs se
+            var name = document.getElementById("customer-name").value;
+            var car = document.getElementById("car-select").value;
+            var date = document.getElementById("booking-date").value;
+            var time = document.getElementById("booking-time").value;
+
+            // Message banana
+            var message = "✅ Booking Request Sent!\n\n" +
+                          "👤 Name: " + name + "\n" +
+                          "🚗 Car: " + car + "\n" +
+                          "📅 Date: " + date + "\n" +
+                          "⏰ Time: " + time + "\n\n" +
+                          "We will contact you shortly to confirm your slot.";
+
+            // Popup show karna
+            alert(message);
+
+            // Form ko wapis khali karna
+            document.getElementById("bookingForm").reset();
+        }
+
+        // 2. Agar koi Details Page se click kar ke aya hai to Car Auto-Select karna
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const carName = urlParams.get('car'); // URL se car ka naam uthana
+            
+            if(carName) {
+                const selectBox = document.getElementById('car-select');
+                // Dropdown me wo car dhoond kar select karna
+                for(let i=0; i < selectBox.options.length; i++) {
+                    if(selectBox.options[i].text.includes(carName)) {
+                        selectBox.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

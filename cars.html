@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Cars - Toyota Car Sales</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">TOYOTA</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html" class="active">Cars</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-contact">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Our Premium Inventory</h1>
+        <p>Explore the latest models with advanced features</p>
+    </section>
+
+    <section class="container">
+        <div class="car-grid">
+            
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Best Seller</span>
+                    <img src="images/car1.png" alt="Toyota Corolla">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Sedan</span>
+                    <h3>Toyota Corolla Altis</h3>
+                    <div class="car-specs">
+                        <span>⚙️ Auto</span>
+                        <span>⛽ Petrol</span>
+                        <span>👤 5 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 5,500,000</p>
+                        <button class="btn-details" onclick="viewDetails('Corolla')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Popular</span>
+                    <img src="images/car2.png" alt="Toyota Yaris">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Compact Sedan</span>
+                    <h3>Toyota Yaris ATIV</h3>
+                    <div class="car-specs">
+                        <span>⚙️ CVT</span>
+                        <span>⛽ Petrol</span>
+                        <span>👤 5 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 4,800,000</p>
+                        <button class="btn-details" onclick="viewDetails('Yaris')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Off-Road</span>
+                    <img src="images/car3.png" alt="Toyota Fortuner">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">SUV</span>
+                    <h3>Toyota Fortuner Legender</h3>
+                    <div class="car-specs">
+                        <span>⚙️ 4x4 Auto</span>
+                        <span>⛽ Diesel</span>
+                        <span>👤 7 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 18,000,000</p>
+                        <button class="btn-details" onclick="viewDetails('Fortuner')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Heavy Duty</span>
+                    <img src="images/car4.png" alt="Toyota Hilux">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Pickup Truck</span>
+                    <h3>Toyota Hilux Revo Rocco</h3>
+                    <div class="car-specs">
+                        <span>⚙️ 4x4 Auto</span>
+                        <span>⛽ Diesel</span>
+                        <span>👤 5 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 14,500,000</p>
+                        <button class="btn-details" onclick="viewDetails('Hilux')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Luxury</span>
+                    <img src="images/car5.png" alt="Toyota Land Cruiser">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Luxury SUV</span>
+                    <h3>Land Cruiser ZX 300</h3>
+                    <div class="car-specs">
+                        <span>⚙️ Auto</span>
+                        <span>⛽ Turbo</span>
+                        <span>👤 7 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 80,000,000</p>
+                        <button class="btn-details" onclick="viewDetails('LandCruiser')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Eco Friendly</span>
+                    <img src="images/car6.png" alt="Toyota Camry">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Hybrid Sedan</span>
+                    <h3>Toyota Camry Hybrid</h3>
+                    <div class="car-specs">
+                        <span>⚙️ e-CVT</span>
+                        <span>⚡ Hybrid</span>
+                        <span>👤 5 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 25,000,000</p>
+                        <button class="btn-details" onclick="viewDetails('Camry')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">New Shape</span>
+                    <img src="images/car7.png" alt="Toyota Prius">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Hybrid</span>
+                    <h3>Toyota Prius</h3>
+                    <div class="car-specs">
+                        <span>⚙️ Auto</span>
+                        <span>⚡ Hybrid</span>
+                        <span>👤 5 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 9,500,000</p>
+                        <button class="btn-details" onclick="viewDetails('Prius')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Sports</span>
+                    <img src="images/car8.png" alt="Toyota Supra">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Sports Car</span>
+                    <h3>Toyota GR Supra</h3>
+                    <div class="car-specs">
+                        <span>⚙️ Auto</span>
+                        <span>⛽ Petrol</span>
+                        <span>👤 2 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 35,000,000</p>
+                        <button class="btn-details" onclick="viewDetails('Supra')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image-box">
+                    <span class="badge">Premium</span>
+                    <img src="images/car9.png" alt="Toyota Crown">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Luxury Sedan</span>
+                    <h3>Toyota Crown RS</h3>
+                    <div class="car-specs">
+                        <span>⚙️ Auto</span>
+                        <span>⚡ Hybrid</span>
+                        <span>👤 5 Seats</span>
+                    </div>
+                    <div class="card-footer">
+                        <p class="price">PKR 16,000,000</p>
+                        <button class="btn-details" onclick="viewDetails('Crown')">Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Toyota Car Sales is your trusted partner for buying luxury and reliable vehicles. We provide the best quality cars with official warranty and premium support.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars Inventory</a></li>
+                        <li><a href="about.html">About Company</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📍 Main Showroom, Blue Area, Islamabad</li>
+                        <li>📞 +92 300 1234567</li>
+                        <li>✉️ sales@toyotapakistan.com</li>
+                        <li>🕒 Mon - Sat: 9:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Toyota Car Sales. All Rights Reserved. | Designed by You</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

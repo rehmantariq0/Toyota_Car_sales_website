@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Toyota Sales</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">TOYOTA</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="details-container">
+        
+        <div class="product-gallery">
+            <div class="main-image">
+                <img id="main-img" src="images/car1.png" alt="Car Image">
+            </div>
+            
+            <div class="thumbnail-row">
+                <img src="images/car1.png" onclick="changeImage(this)" class="active-thumb">
+                <img src="images/car2.png" onclick="changeImage(this)">
+                <img src="images/car3.png" onclick="changeImage(this)">
+                <img src="images/car4.png" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <span class="stock-badge">In Stock</span>
+            
+            <h1 id="car-title">Toyota Corolla Altis</h1>
+            <h2 id="car-price" class="details-price">PKR 5,500,000</h2>
+            
+            <p id="car-desc" class="description">
+                Loading Details...
+            </p>
+
+            <div class="specs-table">
+                <h3>Technical Specifications</h3>
+                <table>
+                    <tr><td><strong>Engine:</strong></td><td id="spec-engine">1.6L</td></tr>
+                    <tr><td><strong>Transmission:</strong></td><td id="spec-trans">Automatic</td></tr>
+                    <tr><td><strong>Horsepower:</strong></td><td id="spec-hp">138 HP</td></tr>
+                    <tr><td><strong>Fuel Type:</strong></td><td id="spec-fuel">Petrol</td></tr>
+                </table>
+            </div>
+
+            <div class="action-buttons">
+                <a href="contact.html" class="btn-buy">Book Test Drive</a>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Toyota Car Sales is your trusted partner for buying luxury and reliable vehicles. We provide the best quality cars with official warranty and premium support.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars Inventory</a></li>
+                        <li><a href="about.html">About Company</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📍 Main Showroom, Blue Area, Islamabad</li>
+                        <li>📞 +92 300 1234567</li>
+                        <li>✉️ sales@toyotapakistan.com</li>
+                        <li>🕒 Mon - Sat: 9:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Toyota Car Sales. All Rights Reserved. | Designed by You</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

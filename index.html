@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Car Sales - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">TOYOTA</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-contact">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        
+        <video autoplay muted loop playsinline class="back-video">
+            <source src="videos/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-text">
+            <h1>Drive Your Dream Toyota</h1>
+            <p>Experience reliability, comfort, and modern design like never before.</p>
+            <a href="cars.html" class="btn-main">View All Cars</a>
+        </div>
+    </section>
+
+    <section class="slider-section">
+        <h2 class="section-title">Latest Arrivals</h2>
+        
+        <div class="slider-container">
+            
+            <button class="arrow-btn prev-btn" onclick="manualSlide(-1)">&#10094;</button>
+
+            <div class="slider-track" id="sliderTrack">
+                
+                <div class="slide">
+                    <img src="images/car1.png" alt="Car 1">
+                    <div class="slide-content">
+                        <h3>Toyota Corolla Altis</h3>
+                        <p>The world's most loved sedan with advanced safety features.</p>
+                        <button onclick="viewDetails('Corolla')">View Details</button>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/car2.png" alt="Car 2">
+                    <div class="slide-content">
+                        <h3>Toyota Yaris ATIV</h3>
+                        <p>Stylish, efficient, and perfect for city driving.</p>
+                        <button onclick="viewDetails('Yaris')">View Details</button>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/car3.png" alt="Car 3">
+                    <div class="slide-content">
+                        <h3>Toyota Fortuner</h3>
+                        <p>Conquer the off-road with power and luxury.</p>
+                        <button onclick="viewDetails('Fortuner')">View Details</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="arrow-btn next-btn" onclick="manualSlide(1)">&#10095;</button>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Toyota Car Sales is your trusted partner for buying luxury and reliable vehicles. We provide the best quality cars with official warranty and premium support.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Cars Inventory</a></li>
+                        <li><a href="about.html">About Company</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📍 Main Showroom, Blue Area, Islamabad</li>
+                        <li>📞 +92 300 1234567</li>
+                        <li>✉️ sales@toyotapakistan.com</li>
+                        <li>🕒 Mon - Sat: 9:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Toyota Car Sales. All Rights Reserved. | Designed by You</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
